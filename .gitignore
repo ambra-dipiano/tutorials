@@ -1,0 +1,9 @@
+# files and folders
+__*
+.*
+
+# extensions
+*.egg-info
+
+# exceptions
+!.gitignore
