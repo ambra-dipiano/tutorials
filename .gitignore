@@ -1,9 +1,13 @@
 # files and folders
 __*
 .*
+data
 
 # extensions
 *.egg-info
+*.sh
+*.xml
+*.fits
 
 # exceptions
 !.gitignore
