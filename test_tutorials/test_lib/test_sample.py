@@ -8,7 +8,7 @@
 # *******************************************************************************
 
 import pytest 
-from tutorials.sample import *
+from tutorials.lib.sample import *
 
 def test_plus1():
     assert plus1(3) == 4

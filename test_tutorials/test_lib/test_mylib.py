@@ -8,7 +8,7 @@
 # *******************************************************************************
 
 import pytest
-from tutorials.mylib import MyLib
+from tutorials.lib.mylib import MyLib
 
 
 
