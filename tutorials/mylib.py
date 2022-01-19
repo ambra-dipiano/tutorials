@@ -9,7 +9,7 @@
 
 import numpy as np
 
-class PhotometryRegions():
+class MyLib():
     def __init__(self) -> None:
         pass
 
@@ -26,7 +26,7 @@ class PhotometryRegions():
         return self
 
     def get_target(self):
-        assert isinstance(self.target) is True, 'self.target had not been set.'
+        assert isinstance(self.target) is True, 'self.target has not been set.'
         return  self.target
 
     def set_offaxis(self, offset):

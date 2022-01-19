@@ -8,7 +8,9 @@
 # *******************************************************************************
 
 import pytest
-from tutorials.Photometry import PhotometryRegions
+from tutorials.mylib import MyLib
+
+
 
 
     
