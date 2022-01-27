@@ -8,7 +8,7 @@
 # *******************************************************************************
 
 import pytest 
-from tutorials.lib.sample import *
+from tutorials.lib.utils import *
 
 def test_plus1():
     assert plus1(3) == 4
@@ -24,3 +24,4 @@ def test_str2bool():
     with pytest.raises(ValueError):
         for val in error:
             str2bool(val)
+    

@@ -19,3 +19,18 @@ def str2bool(val):
         return False
     else:
         raise ValueError('Input is not valid.')
+
+def assert_error(val):
+    assert val == None, 'input "val" is not None'
+
+def raise_error(val):
+    try:
+        val += None
+    except:
+        raise TypeError('You cannot sum NoneType values to input')
+
+def raise_conditional_error(val):
+    if val != None:
+        print('do stuff')
+    else:
+        raise ValueError('val should be not None')
