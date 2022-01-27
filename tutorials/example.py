@@ -63,8 +63,10 @@ if args.topic.lower() == 'error':
     assert type(args.ra) == str, 'This variable must be a string'
     # handle errors with try/except sintax
     try:
+        # this function raises an error if you pass something else than None
         raise_error(1)
     except:
+        # instead or raising the error (which stops execution) print
         print('Here you can handle the error as you see fit.')
     
     
