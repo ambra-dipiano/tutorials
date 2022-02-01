@@ -7,6 +7,8 @@
 # Ambra Di Piano <ambra.dipiano@inaf.it>
 # *******************************************************************************
 
+import warnings
+
 def plus1(x):
     return x + 1
 
@@ -18,19 +20,22 @@ def str2bool(val):
     elif val in false:
         return False
     else:
-        raise ValueError('Input is not valid.')
+        raise ValueError('input is not valid.')
 
 def assert_error(val):
-    assert val == None, 'input "val" is not None'
+    assert val == None, 'input "val" is not NoneType'
 
 def raise_error(val):
     try:
         val += None
     except:
-        raise TypeError('You cannot sum NoneType values to input')
+        raise TypeError('you cannot sum NoneType values to input')
 
 def raise_conditional_error(val):
     if val != None:
         print('do stuff')
     else:
         raise ValueError('val should be not None')
+
+def throw_warning():
+    warnings.warn('this is a deprecation warning', category=DeprecationWarning, stacklevel=2)

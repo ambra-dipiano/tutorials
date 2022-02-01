@@ -8,8 +8,8 @@
 # *******************************************************************************
 
 import argparse
-
-from tutorials.lib.utils import raise_error
+import warnings
+from tutorials.lib.utils import raise_error, throw_warning
 
 parser = argparse.ArgumentParser(description='Exemple on the use of ARGPARSE')
 parser.add_argument('-t', '--topic', type=str, required=True, choices=['argparse', 'yaml', 'logging', 'error'])
@@ -60,13 +60,16 @@ if args.topic.lower() == 'logging':
 # rising and handling errors, asserting, try and except
 if args.topic.lower() == 'error':
     # assert : verify a condition, i.e. that a parameter is float
-    assert type(args.ra) == str, 'This variable must be a string'
+    assert type(args.source) == str, 'this variable must be a string'
+    # throw warning from function
+    throw_warning()
+    # throw warning from __main__
+    warnings.warn('this is a syntax warning', category=SyntaxWarning)
     # handle errors with try/except sintax
     try:
         # this function raises an error if you pass something else than None
         raise_error(1)
     except:
         # instead or raising the error (which stops execution) print
-        print('Here you can handle the error as you see fit.')
-    
+        print('this way you can handle errors')
     
