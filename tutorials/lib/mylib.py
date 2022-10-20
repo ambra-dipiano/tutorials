@@ -18,7 +18,7 @@ class MyLib():
         return self
 
     def get_pointing(self):
-        assert isinstance(self.pointing) is True, 'self.pointing has not been set.'
+        assert hasattr(MyLib, 'pointing') is True, 'self.pointing has not been set.'
         return self.pointing
 
     def set_target(self, ra, dec):
@@ -26,14 +26,14 @@ class MyLib():
         return self
 
     def get_target(self):
-        assert isinstance(self.target) is True, 'self.target has not been set.'
+        assert hasattr(MyLib, 'target') is True , 'self.target has not been set.'
         return  self.target
 
     def set_offaxis(self, offset):
         self.offaxis = offset
         return self
 
-    def get_offset(pointing, target):
+    def get_offset(self, pointing, target):
         if type(pointing) is dict:
             pointing = (pointing['ra'], pointing['dec'])
         if type(target) is dict:
