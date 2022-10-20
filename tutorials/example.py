@@ -45,7 +45,7 @@ if args.topic.lower() == 'logging':
     logformat='%(asctime)s|%(name)s|%(levelname)s|%(message)s'
     if args.file != None:
         # log to file with given logging level
-        logging.basicConfig(filename=args.file, encoding='utf-8', format=logformat)
+        logging.basicConfig(filename=args.file, format=logformat)
     else:
         # log to terminal with given logging level
         logging.basicConfig(format=logformat)
