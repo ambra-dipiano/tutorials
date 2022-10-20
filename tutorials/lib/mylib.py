@@ -61,3 +61,21 @@ class MyLib():
     def reflected_regions(self):
         return
 
+    def set_value(self, value):
+        self.value = value
+        return self
+
+    def add(self, addendum):
+        self.value += addendum
+        return self
+
+    def multiply_by(self, multiplicandum):
+        self.value *= multiplicandum
+        return self
+
+    def divide_by(self, dividendum):
+        self.value /= dividendum
+        return self
+
+    def output_result(self):
+        return self.value

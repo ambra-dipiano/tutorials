@@ -9,10 +9,11 @@
 
 import argparse
 import warnings
+from tutorials.lib.mylib import MyLib
 from tutorials.lib.utils import raise_error, throw_warning
 
 parser = argparse.ArgumentParser(description='Exemple on the use of ARGPARSE')
-parser.add_argument('-t', '--topic', type=str, required=True, choices=['argparse', 'yaml', 'logging', 'error'])
+parser.add_argument('-t', '--topic', type=str, required=True, choices=['argparse', 'yaml', 'logging', 'error', 'classes'])
 parser.add_argument('-s', '--source', type=str, default='crab', choices=['crab', 'grb', 'vela'], help="source to simulate")
 parser.add_argument('-ra', type=float, default=83.6331, help='right ascension of source')
 parser.add_argument('-dec', type=float, default=22.0145, help='declination of source')
@@ -73,3 +74,11 @@ if args.topic.lower() == 'error':
         # instead or raising the error (which stops execution) print
         print('this way you can handle errors')
     
+# classes and method chaining
+if args.topic.lower() == 'classes':
+    # instantiate the class
+    my_object = MyLib()
+    # phrase a simple arithmetic operation
+    operation = my_object.set_value(5).add(2).multiply_by(3).divide_by(5).add(-3).output_result()
+    print(f'Result of [(5+2)*3/5]-3 = {operation}')
+
