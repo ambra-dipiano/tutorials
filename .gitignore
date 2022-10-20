@@ -11,3 +11,4 @@ data
 
 # exceptions
 !.gitignore
+!__init__.py
