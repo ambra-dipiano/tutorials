@@ -1,5 +1,5 @@
 # tutorials
-Repository used for learning purposes. This tutorial is explained here: (developer tools slides)[https://docs.google.com/presentation/d/135C87goCAI9p2RG0zpkjcxd07yjU1yBOsgXx2oaRitg/edit?usp=sharing]. Exercises cover topics from slide #37 onword.
+Repository used for learning purposes. This tutorial is explained here: [https://docs.google.com/presentation/d/135C87goCAI9p2RG0zpkjcxd07yjU1yBOsgXx2oaRitg/edit?usp=sharing](developer tools slides). Exercises cover topics from slide #37 onword.
 
 ## SSH remote connection
 Connecting to servers (and remote repositories) via SSH.
